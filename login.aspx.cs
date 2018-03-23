@@ -16,6 +16,7 @@ public partial class login : System.Web.UI.Page
     {
         try
         {
+            Session.Timeout = 120;
             if(tbxUserName.Text == "admin" 
                 && tbxPassword.Text == "admin")
             {

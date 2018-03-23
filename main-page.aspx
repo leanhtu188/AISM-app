@@ -159,7 +159,7 @@
                                 <div class="display-table height-100 width-100">
                                     <div class="vertical-align-middle display-table-cell padding-twelve-lr">
                                         <h6>MATCHA RESTAURANTS</h6>
-                                        <span class="text-white display-inline-block text-center">12 Orchard Road - B2/121 Star Vista - B1/11 Joo Koon Junction</span>
+                                        <span class="text-white display-inline-block text-center">12 Orchard Road - B2/121 Joo Koon Junction</span>
                                     </div>
                                 </div>
                             </div>
