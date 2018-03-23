@@ -13,7 +13,7 @@
           <input type="text" class="form-control" placeholder="Type here" id="search">
           <button type="button" class="btn btn-primary">Add Another Location!</button>
         </div>--%>
-                    <button id="last" type="button" class="btn btn-primary">Add Another Location!</button>
+                    <button id="last" onclick="addLocation()" type="button" class="btn btn-primary">Add Another Location!</button>
                     <button type="button" class="btn btn-primary">Route!</button>
                     <br />
                     <kbd>End</kbd>
@@ -23,10 +23,17 @@
     </section>
     <script>
 
+        function setStyle(obj, propertyObject) {// helper method
+            var elem = obj;
+            for (var property in propertyObject)
+                elem.style[property] = propertyObject[property];
+        }
+
         function createWhereDoYouGo() {
             //create javascript element
             var encaspsulatDIV = document.createElement("div");
             encaspsulatDIV.className = "form-group";
+            encaspsulatDIV.id = "searchBarThing";
             var labelObj = document.createElement("label");
             labelObj.for = "search";
             labelObj.innerHTML = "Where do you want to go?";
@@ -62,20 +69,31 @@
                 }
             });
         }
-        init();
+        init(); //create first search and get data from yelp
 
-        function add() {
+        function createTrailPoint(item) {
+            var deletePoint = document.createElement("button");
+            deletePoint.type = 'button';
+            deletePoint.innerHTML = "<b style='color:white'>X</b>";
+            deletePoint.className = "btn-danger";
+            deletePoint.addEventListener('click', function () {
+
+                $("#" + item.id).remove();
+
+            }, this);
+            $(item).append(deletePoint);
+            return item;
+        }
+        function addLocation() {
+            if ($("#search").length != 0)
+                return;
             //remove the current search crap
 
             //add new search crap
             $("#last").before(createWhereDoYouGo());
         }
 
-        function setStyle(obj, propertyObject) {
-            var elem = obj;
-            for (var property in propertyObject)
-                elem.style[property] = propertyObject[property];
-        }
+        
 
         var t = null;
         function searchBarResults() {
@@ -92,7 +110,7 @@
                     for (var i = 0; i < dateFromYelp.length; i++) {
                         var currentItem = dateFromYelp[i];
                         var temp = document.createElement("div");
-                        setStyle(temp, { 'width': '384px', 'height': '120px', 'display': 'flex' });
+                        setStyle(temp, { 'width': '384px', 'height': '120px', 'display': 'flex','padding':'5px' });
                         var pic = document.createElement('img');
                         pic.src = currentItem.image_url;
                         setStyle(pic, { 'height': '100px' });
@@ -104,7 +122,15 @@
                         $(temp).append(pic);
                         $(temp).append(name);
                         $(temp).append(rating);
-                        temp.addEventListener('click', function () { console.log('u clicky bastard') }, this);
+                        temp.id = currentItem.id; 
+                        temp.addEventListener('click', function (e) {
+                            //add the element first
+
+                            $("#last").before(createTrailPoint(e.currentTarget.cloneNode(true)));
+                            //remove
+                            $("#searchBarThing").remove();
+                            $(results).remove();
+                        }, this);
                         $(results).append(temp);
                     }
                     $("body").append(results);
@@ -112,6 +138,8 @@
                 }, 500, this);
             }
         }
+
+       
 
 
         console.log("I Ran!");
