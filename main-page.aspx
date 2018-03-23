@@ -118,7 +118,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 col-xs-12 col-sm-12">
-                    <a href="Search.aspx" class="btn btn-default">Create new Trail</a>
+                    <asp:Button ID="btnCreate" runat="server" CssClass="btn btn-defaul" Text="Create new trail" OnClick="btnCreate_Click" />
                 </div>
             </div>
         </div>

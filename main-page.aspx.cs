@@ -11,4 +11,9 @@ public partial class main_page : System.Web.UI.Page
     {
 
     }
+
+    protected void btnCreate_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("search.aspx");
+    }
 }

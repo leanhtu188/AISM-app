@@ -3,7 +3,7 @@
 /*------------------
     Custom Style
     -----------------
-*/
+
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
@@ -15,7 +15,7 @@ body{
     line-height:24px;
     font-size:18px;
 }
-/*
+
 .navbar-nav{
     font-size:18px;
 }
