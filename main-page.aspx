@@ -9,16 +9,18 @@
     <section>
         <div class="container tab-style2">
             <div class="row">
-                <h2>Popular Trails</h2>
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <h2>Popular Trails</h2>
+                </div>                
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <!-- start tab navigation -->
                     <ul class="nav nav-tabs alt-font text-uppercase text-small display-inherit text-center font-weight-600">
-                        <li class="active"><a href="#tab_sec1" data-toggle="tab">Design & Craft</a></li>
-                        <li><a href="#tab_sec2" data-toggle="tab">Development</a></li>
-                        <li><a href="#tab_sec3" data-toggle="tab">Branding</a></li>
-                        <li><a href="#tab_sec4" data-toggle="tab">Brainstorming</a></li>
+                        <li class="active"><a href="#tab_sec1" data-toggle="tab">Food</a></li>
+                        <li><a href="#tab_sec2" data-toggle="tab">History</a></li>
+                        <li><a href="#tab_sec3" data-toggle="tab">Culture</a></li>
+                        <li><a href="#tab_sec4" data-toggle="tab">Education</a></li>
                     </ul>
                     <!-- end tab navigation -->
                 </div>
@@ -34,10 +36,10 @@
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
                             <div class="display-table-cell vertical-align-middle">
-                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Design & Craft</h6>
-                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">We use different types of massage for a variety of health related benefits purposes.</span>
+                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Food</h6>
+                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">Explore the best of Chinatown</span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Explore services</a>
+                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Try Trail</a>
                             </div>
                         </div>
                     </div>
@@ -53,10 +55,10 @@
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
                             <div class="display-table-cell vertical-align-middle">
-                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Development</h6>
-                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">We use different types of massage for a variety of health related benefits purposes.</span>
+                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">History</h6>
+                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">See the rich historical side of Singapore</span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Explore services</a>
+                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Try Trail</a>
                             </div>
                         </div>
                     </div>
@@ -72,10 +74,10 @@
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
                             <div class="display-table-cell vertical-align-middle">
-                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Branding</h6>
-                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">We use different types of massage for a variety of health related benefits purposes.</span>
+                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Culture</h6>
+                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">Take a look at the wild side of Singapore</span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Explore services</a>
+                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Try Trail</a>
                             </div>
                         </div>
                     </div>
@@ -91,10 +93,10 @@
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
                             <div class="display-table-cell vertical-align-middle">
-                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Brainstorming</h6>
-                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">We use different types of massage for a variety of health related benefits purposes.</span>
+                                <h6 class="alt-font font-weight-700 text-extra-dark-gray margin-20px-bottom text-uppercase">Education</h6>
+                                <span class="text-extra-large text-extra-dark-gray margin-20px-bottom display-block">State of the art, art of the state</span>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Explore services</a>
+                                <a href="javascript:void(0);" class="btn btn-small btn-rounded btn-dark-gray">Try Trail</a>
                             </div>
                         </div>
                     </div>
@@ -104,7 +106,13 @@
         </div>
     </section>
     <section>
-        <h2>Your Trails</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h2>Your Trails</h2>
+                </div>                
+            </div>
+        </div>        
     </section>
     <section>
         <div class="container">
