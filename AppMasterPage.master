@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html style="height:100%">
 <head runat="server">
     <title>Trail of Treats</title>
     <meta charset="utf-8">
@@ -23,8 +23,8 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="height:100% !important">
+    <form id="form1" runat="server" style="height:100%">
 
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -48,10 +48,11 @@
 
             </div>
         </nav>
-        <div>
+        <div class="container body-content" style="height:calc(100% - 72px) !important">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    
 </body>
 </html>
