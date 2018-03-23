@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
                     <h2>Popular Trails</h2>
-                </div>                
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -110,15 +110,15 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h2>Your Trails</h2>
-                </div>                
+                </div>
             </div>
-        </div>        
+        </div>
     </section>
     <section>
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12 col-xs-12 col-sm-12">
-                    <button class="btn btn-defaul">Create new Trail</button>
+                    <a href="Search.aspx" class="btn btn-default">Create new Trail</a>
                 </div>
             </div>
         </div>

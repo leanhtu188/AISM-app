@@ -1,23 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AppMasterPage.master" AutoEventWireup="true" CodeFile="Search.aspx.cs" Inherits="Search" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div id="mainSearch" style="height:100%;overflow-y:auto">
-        <kbd>Start</kbd>
-        <%--<div class="form-group">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <section>
+        <div class="container">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <div id="mainSearch" style="height: 100%; overflow-y: auto">
+                    <kbd>Start</kbd>
+                    <%--<div class="form-group">
           <label for="search">Where do you want to go?</label>
           <input type="text" class="form-control" placeholder="Type here" id="search">
           <button type="button" class="btn btn-primary">Add Another Location!</button>
         </div>--%>
-         <button id="last" type="button" class="btn btn-primary">Add Another Location!</button>
-         <button type="button" class="btn btn-primary">Route!</button>
-        <br />
-        <kbd >End</kbd>
-    </div>
-    
+                    <button id="last" type="button" class="btn btn-primary">Add Another Location!</button>
+                    <button type="button" class="btn btn-primary">Route!</button>
+                    <br />
+                    <kbd>End</kbd>
+                </div>
+            </div>
+        </div>
+    </section>
     <script>
-        
+
         function createWhereDoYouGo() {
             //create javascript element
             var encaspsulatDIV = document.createElement("div");
@@ -31,14 +36,14 @@
             textObj.placeholder = "Type here";
             textObj.id = "search";
             textObj.autocomplete = "off"
-            textObj.addEventListener('input', function () { searchBarResults() },this);
+            textObj.addEventListener('input', function () { searchBarResults() }, this);
             var buttObj = document.createElement("button");
             //buttObj.type = "button";
             //buttObj.className = "btn btn-primary";
             //buttObj.innerHTML = "Add Another Location!";
             encaspsulatDIV.appendChild(labelObj);
             encaspsulatDIV.appendChild(textObj);
-          //  encaspsulatDIV.appendChild(buttObj);
+            //  encaspsulatDIV.appendChild(buttObj);
             return encaspsulatDIV;
         }
         var dateFromYelp;
@@ -48,7 +53,7 @@
             $.ajax({
                 type: "GET",
                 url: "https://api.yelp.com/v3/businesses/search?location=Singapore",
-                headers: { 'Authorization':'Bearer gKTxh7U1kqDa3HydGAHnv3jRDHyQdbwxP5avmCNu7gjposOD3nrEikOR6T3WK9mganamWPyuwXH0UovY8cDLBVYHjT2h9BWtPF4x4CFVkdXXn5tJtQvQjl4HduyvWnYx'},
+                headers: { 'Authorization': 'Bearer gKTxh7U1kqDa3HydGAHnv3jRDHyQdbwxP5avmCNu7gjposOD3nrEikOR6T3WK9mganamWPyuwXH0UovY8cDLBVYHjT2h9BWtPF4x4CFVkdXXn5tJtQvQjl4HduyvWnYx' },
                 success: function (result) {
                     dateFromYelp = result.businesses;
                 },
@@ -79,23 +84,23 @@
             t != null ? clearTimeout(t) : null;
             if (!$("#search").val() === "" || !$("#search").val().trim().length == 0) {
                 t = setTimeout(function () {
-                    var positionBelowSearch = "" + ($("#search").offset().top - $(window).scrollTop()+34)+"px";
+                    var positionBelowSearch = "" + ($("#search").offset().top - $(window).scrollTop() + 34) + "px";
                     var results = document.createElement("div");
                     results.id = "searchres";
                     //setstyle self created method to apply styles easily pure java
-                    setStyle(results, {'background':'white','overflow-y':'auto','left':'15px','top': positionBelowSearch , 'border': '1px solid black', 'height': '400px','width':'384px', 'position': 'absolute'});
-                    for (var i = 0; i < dateFromYelp.length; i++){
+                    setStyle(results, { 'background': 'white', 'overflow-y': 'auto', 'left': '15px', 'top': positionBelowSearch, 'border': '1px solid black', 'height': '400px', 'width': '384px', 'position': 'absolute' });
+                    for (var i = 0; i < dateFromYelp.length; i++) {
                         var currentItem = dateFromYelp[i];
                         var temp = document.createElement("div");
-                        setStyle(temp, { 'width': '384px', 'height': '120px','display':'flex' });
+                        setStyle(temp, { 'width': '384px', 'height': '120px', 'display': 'flex' });
                         var pic = document.createElement('img');
                         pic.src = currentItem.image_url;
-                        setStyle(pic, {'height':'100px'});
+                        setStyle(pic, { 'height': '100px' });
                         var name = document.createElement('h4');
                         name.innerHTML = currentItem.name.length > 20 ? jQuery.trim(currentItem.name).substring(0, 20)
                             .trim(this) + "..." : currentItem.name;
                         var rating = document.createElement('div');
-                        rating.innerHTML = currentItem.rating+'/5';
+                        rating.innerHTML = currentItem.rating + '/5';
                         $(temp).append(pic);
                         $(temp).append(name);
                         $(temp).append(rating);
@@ -108,7 +113,7 @@
             }
         }
 
-        
+
         console.log("I Ran!");
     </script>
 </asp:Content>
