@@ -28,7 +28,15 @@
                             </div>
                             <div id="design1" class="panel-collapse collapse in" aria-expanded="false" role="tablist">
                                 <div class="panel-body">
-                                    
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12 col-sm-12">
+                                            <iframe style="width:100%;height:600px"
+                                                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Marina+Bay+Sands&destination=Tian+Tian+Hainanese+Rice&mode=walking"></iframe>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12 col-sm-12">
+
+                                        </div>
+                                    </div>
                                    
                                 </div>
                             </div>
@@ -43,7 +51,12 @@
                             </div>
                             <div id="design2" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                 <div class="panel-body">
-                                    
+                                   <div class="row">
+                                       <div class="col-md-12 col-xs-12 col-sm-12">
+                                            <iframe style="width:100%;height:600px"
+                                                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Tian+Tian+Hainanese+Rice&destination=Nylon+Coffee+Roasters&mode=walking"></iframe>
+                                        </div>
+                                   </div> 
                                    
                                 </div>
                             </div>
@@ -58,7 +71,12 @@
                             </div>
                             <div id="design3" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                 <div class="panel-body">
-                                    
+                                   <div class="row">
+                                       <div class="col-md-12 col-xs-12 col-sm-12">
+                                            <iframe style="width:100%;height:600px"
+                                                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Nylon+Coffee+Roasters&destination=Din+Tai+Fung&mode=walking"></iframe>
+                                        </div>
+                                   </div> 
                                    
                                 </div>
                             </div>
