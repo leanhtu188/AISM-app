@@ -21,13 +21,13 @@ public partial class login : System.Web.UI.Page
             {
                 statusMessage.Text = "logged in";
                 statusMessage.Visible = true;
-                //Response.Redirect("summary.aspx");
+                Response.Redirect("main-page.aspx");
             } else if(tbxUserName.Text=="admin"
                 && tbxPassword.Text == "admin")
             {
                 statusMessage.Text = "logged in";
                 statusMessage.Visible = true;   
-                Response.Redirect("summary.aspx");
+                Response.Redirect("main-page.aspx");
             } else
             {
                 statusMessage.Visible = true;
