@@ -112,6 +112,62 @@
                     <h2>Your Trails</h2>
                 </div>
             </div>
+            <div class="row">
+                <!-- start rotate box item -->
+                <div class="col-md-4 col-sm-4 col-xs-12 team-block text-left feature-box-15 xs-margin-15px-bottom last-paragraph-no-margin">
+                    <figure>
+                        <div class="feature-box-content xs-width-100">
+                            <div class="feature-box-image">
+                                <img src="http://placehold.it/900x650" alt=""></div>
+                            <div class="hover-content bg-black">
+                                <div class="display-table height-100 width-100">
+                                    <div class="vertical-align-middle display-table-cell padding-twelve-lr">
+                                        <h6>My Food Trail</h6>
+                                        <span class="text-white display-inline-block text-center">Chinatown - Outram Park - Marina Bay Sands</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <!-- end rotate box item -->
+                <!-- start rotate box item -->
+                <div class="col-md-4 col-sm-4 col-xs-12 team-block text-left feature-box-15 xs-margin-15px-bottom last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.2s">
+                    <figure>
+                        <div class="feature-box-content xs-width-100">
+                            <div class="feature-box-image">
+                                <img src="http://placehold.it/900x650" alt=""></div>
+                            <div class="hover-content bg-black">
+                                <div class="display-table height-100 width-100">
+                                    <div class="vertical-align-middle display-table-cell padding-twelve-lr">
+                                        <h6>School Visits</h6>
+                                        <span class="text-white display-inline-block text-center">NUS - NTU - SUTD - SMU</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <!-- end rotate box item -->
+                <!-- start rotate box item -->
+                <div class="col-md-4 col-sm-4 col-xs-12 team-block text-left feature-box-15 last-paragraph-no-margin wow fadeInUp" data-wow-delay="0.6s">
+                    <figure>
+                        <div class="feature-box-content xs-width-100">
+                            <div class="feature-box-image">
+                                <img src="http://placehold.it/900x650" alt=""></div>
+                            <div class="hover-content bg-black">
+                                <div class="display-table height-100 width-100">
+                                    <div class="vertical-align-middle display-table-cell padding-twelve-lr">
+                                        <h6>MATCHA RESTAURANTS</h6>
+                                        <span class="text-white display-inline-block text-center">12 Orchard Road - B2/121 Star Vista - B1/11 Joo Koon Junction</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <!-- end rotate box item -->
+            </div>
         </div>
     </section>
     <section>
