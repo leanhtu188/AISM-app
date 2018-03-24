@@ -31,7 +31,7 @@
                     <div class="row equalize">
                         <div class="col-md-6 col-sm-6 col-xs-12 display-table xs-margin-30px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <img src="http://placehold.it/1232x816" alt="" class="width-100" />
+                                <img  src="Content/img/placeholders/1.jpg" alt="" class="width-100" />
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
@@ -50,7 +50,7 @@
                     <div class="row equalize">
                         <div class="col-md-6 col-sm-6 col-xs-12 display-table xs-margin-30px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <img src="http://placehold.it/1232x816" alt="" class="width-100" />
+                                <img src="Content/img/placeholders/2.jpg" alt="" class="width-100" />
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
@@ -69,7 +69,7 @@
                     <div class="row equalize">
                         <div class="col-md-6 col-sm-6 col-xs-12 display-table  xs-margin-30px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <img src="http://placehold.it/1232x816" alt="" class="width-100" />
+                                <img src="Content/img/placeholders/3.jpg" alt="" class="width-100" />
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
@@ -88,7 +88,7 @@
                     <div class="row equalize">
                         <div class="col-md-6 col-sm-6 col-xs-12 display-table  xs-margin-30px-bottom">
                             <div class="display-table-cell vertical-align-middle">
-                                <img src="http://placehold.it/1232x816" alt="" />
+                                <img src="Content/img/placeholders/4.jpg" alt="" />
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-6 col-xs-12 display-table col-md-offset-1">
@@ -118,7 +118,7 @@
                     <figure>
                         <div class="feature-box-content xs-width-100">
                             <div class="feature-box-image">
-                                <img src="http://placehold.it/900x650" alt=""></div>
+                                <img src="Content/img/placeholders/5.jpg" alt=""></div>
                             <div class="hover-content bg-black">
                                 <div class="display-table height-100 width-100">
                                     <div class="vertical-align-middle display-table-cell padding-twelve-lr">
@@ -136,7 +136,7 @@
                     <figure>
                         <div class="feature-box-content xs-width-100">
                             <div class="feature-box-image">
-                                <img src="http://placehold.it/900x650" alt=""></div>
+                                <img src="Content/img/placeholders/6.jpg" alt=""></div>
                             <div class="hover-content bg-black">
                                 <div class="display-table height-100 width-100">
                                     <div class="vertical-align-middle display-table-cell padding-twelve-lr">
@@ -154,7 +154,7 @@
                     <figure>
                         <div class="feature-box-content xs-width-100">
                             <div class="feature-box-image">
-                                <img src="http://placehold.it/900x650" alt=""></div>
+                                <img src="Content/img/placeholders/7.jpg" alt=""></div>
                             <div class="hover-content bg-black">
                                 <div class="display-table height-100 width-100">
                                     <div class="vertical-align-middle display-table-cell padding-twelve-lr">

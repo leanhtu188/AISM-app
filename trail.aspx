@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="Content/custom.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <section style="padding-top:0px;">
+    <section style="padding-top: 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-xs-12 col-sm-12">
@@ -30,14 +30,27 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12 col-xs-12 col-sm-12">
-                                            <iframe style="width:100%;height:600px"
+                                            <iframe style="width: 100%; height: 600px"
                                                 src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Marina+Bay+Sands&destination=Tian+Tian+Hainanese+Rice&mode=walking"></iframe>
                                         </div>
-                                        <div class="col-md-6 col-xs-12 col-sm-12">
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Footfall</h6>
+                                            <%if (haineseFootfall > 300)
+                                                { %>
+                                            <p style="color: red; font-weight: bolder"><%=haineseFootfall %></p>
+                                            <%}
+                                                else
+                                                { %>
 
+                                            <p><%=haineseFootfall %></p>
+                                            <%} %>
+                                        </div>
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Weather</h6>
+                                            <p><%=kallangWeather %></p>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -51,13 +64,28 @@
                             </div>
                             <div id="design2" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                 <div class="panel-body">
-                                   <div class="row">
-                                       <div class="col-md-12 col-xs-12 col-sm-12">
-                                            <iframe style="width:100%;height:600px"
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12 col-sm-12">
+                                            <iframe style="width: 100%; height: 600px"
                                                 src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Tian+Tian+Hainanese+Rice&destination=Nylon+Coffee+Roasters&mode=walking"></iframe>
                                         </div>
-                                   </div> 
-                                   
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Footfall</h6>
+                                            <%if (nylonCoffeeFootfall > 300)
+                                                { %>
+                                            <p style="font-weight: bolder; color: red"><%=nylonCoffeeFootfall %></p>
+                                            <%}
+                                            else
+                                            { %>
+                                            <p><%=nylonCoffeeFootfall %></p>
+                                            <%} %>
+                                        </div>
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Weather</h6>
+                                            <p><%=novenaWeather %></p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -71,13 +99,28 @@
                             </div>
                             <div id="design3" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                 <div class="panel-body">
-                                   <div class="row">
-                                       <div class="col-md-12 col-xs-12 col-sm-12">
-                                            <iframe style="width:100%;height:600px"
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12 col-sm-12">
+                                            <iframe style="width: 100%; height: 600px"
                                                 src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyCWFv7wMvLk4V8R1Ub8of0vVH4vinAM8v4&origin=Nylon+Coffee+Roasters&destination=Din+Tai+Fung&mode=walking"></iframe>
                                         </div>
-                                   </div> 
-                                   
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Footfall</h6>
+                                            <%if (dinTaiFootfall > 300)
+                                                { %>
+                                            <p style="font-weight: bolder; color: red"><%=dinTaiFootfall %></p>
+                                            <%}
+                                            else
+                                            { %>
+                                            <p><%=dinTaiFootfall %></p>
+                                            <%} %>
+                                        </div>
+                                        <div class="text-center col-md-6 col-xs-12 col-sm-12">
+                                            <h6>Weather</h6>
+                                            <p><%=tanglinWeather %></p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
