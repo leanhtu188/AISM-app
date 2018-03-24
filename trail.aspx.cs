@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,27 +20,34 @@ public partial class trail : System.Web.UI.Page
     private static readonly HttpClient httpClient = new HttpClient();
 
 
-    public int haineseFootfall;
+   
     public int marinaFootfall;
-    
+    public int haineseFootfall;
+    public int dinTaiFootfall;
+    public int nylonCoffeeFootfall;
+
+    public string cityWeather;
+    public string novenaWeather;
+    public string tanglinWeather;
+    public string kallangWeather;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        //do your shit here
-        //generateNumbersAsync();
-        //Task<dynamic> task = generateNumbersAsync();
-
-        //task.Wait(); //Blocks thread and waits until task is completed
-
-        //dynamic resultUser = task.Result;
+         
 
         //getFootfall();
-        getWeather();
+        getWeather();//Weather names are above
+        marinaFootfall = 120;
+        haineseFootfall = 43;
+        dinTaiFootfall = 304;
+        nylonCoffeeFootfall =203 ;
     }
  
     public void getWeather()
     {
+        
         string html;
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast?date=2017-05-22");
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast?date="+DateTime.Now.ToString("yyyy-MM-dd"));
         request.AutomaticDecompression = DecompressionMethods.GZip;
 
         using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
@@ -49,7 +57,29 @@ public partial class trail : System.Web.UI.Page
             html = reader.ReadToEnd();
         }
         dynamic result = JsonConvert.DeserializeObject<dynamic>(html);
-        string l = "";
+        List<dynamic> test = result.items.ToObject<IList<dynamic>>();
+        dynamic weather = test.Last();
+        List<dynamic> weatherInner = weather.forecasts.ToObject<IList<dynamic>>();
+        foreach(dynamic el in weatherInner)
+        {
+            if (el.area.ToObject<string>().Equals("City"))
+            {
+                cityWeather = el.forecast;
+            }
+            if (el.area.ToObject<string>().Equals("Novena"))
+            {
+                novenaWeather = el.forecast;
+            }
+            if (el.area.ToObject<string>().Equals("Tanglin"))
+            {
+                tanglinWeather = el.forecast;
+            }
+            if (el.area.ToObject<string>().Equals("Kallang"))
+            {
+                kallangWeather = el.forecast;
+            }
+        }
+        
     }
 
     public void getFootfall()
