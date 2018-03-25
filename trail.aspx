@@ -37,12 +37,12 @@
                                             <h6>Footfall</h6>
                                             <%if (haineseFootfall > 300)
                                                 { %>
-                                            <p style="color: red; font-weight: bolder"><%=haineseFootfall %></p>
+                                            <p style="color: red; font-weight: bolder"><%=haineseFootfall %> (Crowded)</p>
                                             <%}
                                                 else
                                                 { %>
 
-                                            <p><%=haineseFootfall %></p>
+                                            <p><%=haineseFootfall %> (Not Crowded)</p>
                                             <%} %>
                                         </div>
                                         <div class="text-center col-md-6 col-xs-12 col-sm-12">
@@ -73,11 +73,11 @@
                                             <h6>Footfall</h6>
                                             <%if (nylonCoffeeFootfall > 300)
                                                 { %>
-                                            <p style="font-weight: bolder; color: red"><%=nylonCoffeeFootfall %></p>
+                                            <p style="font-weight: bolder; color: red"><%=nylonCoffeeFootfall %> (Crowded)</p>
                                             <%}
                                             else
                                             { %>
-                                            <p><%=nylonCoffeeFootfall %></p>
+                                            <p><%=nylonCoffeeFootfall %> (Not Crowded)</p>
                                             <%} %>
                                         </div>
                                         <div class="text-center col-md-6 col-xs-12 col-sm-12">
@@ -108,11 +108,11 @@
                                             <h6>Footfall</h6>
                                             <%if (dinTaiFootfall > 300)
                                                 { %>
-                                            <p style="font-weight: bolder; color: red"><%=dinTaiFootfall %></p>
+                                            <p style="font-weight: bolder; color: red"><%=dinTaiFootfall %> (Crowded)</p>
                                             <%}
                                             else
                                             { %>
-                                            <p><%=dinTaiFootfall %></p>
+                                            <p><%=dinTaiFootfall %> (Not Crowded)</p>
                                             <%} %>
                                         </div>
                                         <div class="text-center col-md-6 col-xs-12 col-sm-12">

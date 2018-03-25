@@ -7,7 +7,7 @@
         <div class="container">
             <div class="col-md-12 col-xs-12 col-sm-12">
                 <div id="mainSearch" style="height: 100%; overflow-y: auto">
-                    <kbd>Start</kbd>
+                    <kbd>Start of Trail</kbd>
                     <%--<div class="form-group">
           <label for="search">Where do you want to go?</label>
           <input type="text" class="form-control" placeholder="Type here" id="search">
@@ -16,7 +16,7 @@
                     <button id="last" onclick="addLocation()" type="button" class="btn btn-primary">Add Another Location!</button>
                     <asp:Button type="button" runat="server" OnClick="route_click" CssClass="btn btn-primary" Text="Route!"></asp:Button>
                     <br />
-                    <kbd>End</kbd>
+                    <kbd>End of Trail</kbd>
                 </div>
             </div>
         </div>
