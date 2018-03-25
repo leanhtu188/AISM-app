@@ -14,7 +14,7 @@
           <button type="button" class="btn btn-primary">Add Another Location!</button>
         </div>--%>
                     <button id="last" onclick="addLocation()" type="button" class="btn btn-primary">Add Another Location!</button>
-                    <button type="button" class="btn btn-primary">Route!</button>
+                    <asp:Button type="button" runat="server" OnClick="route_click" CssClass="btn btn-primary" Text="Route!"></asp:Button>
                     <br />
                     <kbd>End</kbd>
                 </div>

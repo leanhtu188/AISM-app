@@ -11,4 +11,8 @@ public partial class Search : System.Web.UI.Page
     {
 
     }
+    protected void route_click(object sender, EventArgs e)
+    {
+        Response.Redirect("trail.aspx");
+    }
 }

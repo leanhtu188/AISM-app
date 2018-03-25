@@ -33,8 +33,6 @@ public partial class trail : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-         
-
         //getFootfall();
         getWeather();//Weather names are above
         marinaFootfall = 120;
@@ -49,37 +47,46 @@ public partial class trail : System.Web.UI.Page
         string html;
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.data.gov.sg/v1/environment/2-hour-weather-forecast?date="+DateTime.Now.ToString("yyyy-MM-dd"));
         request.AutomaticDecompression = DecompressionMethods.GZip;
+        try
+        {
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream stream = response.GetResponseStream())
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                html = reader.ReadToEnd();
+            }
+            dynamic result = JsonConvert.DeserializeObject<dynamic>(html);
+            List<dynamic> test = result.items.ToObject<IList<dynamic>>();
+            dynamic weather = test.Last();
+            List<dynamic> weatherInner = weather.forecasts.ToObject<IList<dynamic>>();
+            foreach(dynamic el in weatherInner)
+            {
+                if (el.area.ToObject<string>().Equals("City"))
+                {
+                    cityWeather = el.forecast;
+                }
+                if (el.area.ToObject<string>().Equals("Novena"))
+                {
+                    novenaWeather = el.forecast;
+                }
+                if (el.area.ToObject<string>().Equals("Tanglin"))
+                {
+                    tanglinWeather = el.forecast;
+                }
+                if (el.area.ToObject<string>().Equals("Kallang"))
+                {
+                    kallangWeather = el.forecast;
+                }
+            }
+        }
+        catch (Exception e)
+        {   //should weather server go down
+            cityWeather = "Partly Cloudy";
+            novenaWeather = "Light Rain";
+            tanglinWeather = "Partly Cloudy";
+            kallangWeather = "Cloudy";
+        }
 
-        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-        using (Stream stream = response.GetResponseStream())
-        using (StreamReader reader = new StreamReader(stream))
-        {
-            html = reader.ReadToEnd();
-        }
-        dynamic result = JsonConvert.DeserializeObject<dynamic>(html);
-        List<dynamic> test = result.items.ToObject<IList<dynamic>>();
-        dynamic weather = test.Last();
-        List<dynamic> weatherInner = weather.forecasts.ToObject<IList<dynamic>>();
-        foreach(dynamic el in weatherInner)
-        {
-            if (el.area.ToObject<string>().Equals("City"))
-            {
-                cityWeather = el.forecast;
-            }
-            if (el.area.ToObject<string>().Equals("Novena"))
-            {
-                novenaWeather = el.forecast;
-            }
-            if (el.area.ToObject<string>().Equals("Tanglin"))
-            {
-                tanglinWeather = el.forecast;
-            }
-            if (el.area.ToObject<string>().Equals("Kallang"))
-            {
-                kallangWeather = el.forecast;
-            }
-        }
-        
     }
 
     public void getFootfall()
